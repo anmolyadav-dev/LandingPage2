@@ -28,7 +28,13 @@ html , body {
     padding: 20px 30px;
     justify-content: space-between;
 }
-
+#lnav i{
+    transition: all 0.4s ease-in-out;
+}
+#lnav i:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
 #lnavr{
     display: flex;
     align-items: center;
@@ -42,20 +48,28 @@ html , body {
 #lnavr i{
     color: royalblue;
 }
+
 #lnavr .unique{
     position:relative;
+    transform-origin: left;
 }
 #lnavr .unique:before{
     content: "";
     position: absolute;
-    width: 0%;
-    height: 100%;
-    padding-bottom: 1.5px;
-    border-bottom: 1px solid black;
-    transition: 0.4s;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    height: .5px;
+    
+    transition: transform 0.4s ease-in-out;
+    transform-origin: right;
+    transform: scaleX(0);
 }
 #lnavr .unique:hover:before{
-    width: 100%;
+    
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
 
