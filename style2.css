@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+html , body {
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+   
+    display: flex;
+}
+#left{
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+#lnav{
+    display: flex;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+
+#lnavr{
+    display: flex;
+    align-items: center;
+}
+#lnavr a{
+    margin-right: 20px;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+}
+#lnavr i{
+    color: royalblue;
+}
+#lnavr .unique{
+    position:relative;
+}
+#lnavr .unique:before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    padding-bottom: 1.5px;
+    border-bottom: 1px solid black;
+    transition: 0.4s;
+}
+#lnavr .unique:hover:before{
+    width: 100%;
+}
+
+
+ #textcenter{
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#textcenter h1{
+    font-size: 90px;
+    font-weight: 900;
+    cursor: pointer;
+    transition : all 0.5s ease-in-out ;
+}
+#textcenter h1:hover{
+    transform: scale(1.05);
+}
+#textcenter p{
+    opacity: 0.7;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#textcenter a{
+    color: black;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    
+}
+
+
+#right{
+    width: 60%;
+    height: 100%;
+    position: relative;
+    
+}
+#rtop{
+    height: 50%;
+    width: 100%;
+    
+    display: flex;
+}
+#rbottom{
+    height: 50%;
+    width: 100%;
+    background:  url(https://images.unsplash.com/photo-1619241638225-14d56e47ae64?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);    
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+#rtopleft{
+      
+    height:100%;
+    width: 55%;
+    /* background-image: url(orange.jpg);
+    background-size: cover;
+    background-position: center; */
+     overflow: hidden;              /*to make the image big but container as it is || ZOOM IN EFFECT */
+    background: url(/static/imgs/banners/holiday-small-confetti.gif);
+    
+}
+#rtopleft img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s linear;
+    
+}
+#rtopleft img:hover{
+   
+    transform: scale(1.1);
+}
+#rtopright{
+    height: 100%;
+    width: 45%;
+    /* background-image: url("orange2.jpg");
+    background-size: cover;
+    background-position: center; */
+    overflow: hidden;
+
+}
+#rtopright img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+#rtopright img:hover{       /*ZOOM IN EFFECT*/
+    transform: scale(1.1);
+
+}
+#navigate{
+    position: absolute;
+    height: 12%;
+    width: 13%;
+    background-color: pink;
+    bottom: 0%;
+    left: 0%;
+}
+
+/* TO  MAKE  WEBSITE  RESPONSIVE   */
+@media(max-width:500px){
+    #main{
+        flex-direction: column;
+    }
+    #left{
+        width: 100%;
+
+    }
+    #right{
+        width: 100%;
+    }
+}
+
+/* .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.01)); 
+    z-index: 1;
+  } */
